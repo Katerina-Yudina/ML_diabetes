@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="creditsbox">
+        <span class="creditsicon">₵</span>  <!-- Иконка монетки -->
+        <span id="credits">0</span>  <!-- Текущие кредиты -->
+    </div>
+    <div class="containerbig">
+        <!-- Форма -->
+        <div class="form-container">
+            <h1>Predictions</h1>
+            <form id="featuresForm">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="19-79" required>
+
+                <label for="sex">Sex</label>
+                <input type="number" id="sex" name="sex" placeholder="1 (Male) or 2 (Female)" required>
+
+                <label for="bmi">BMI</label>
+                <input type="number" step="0.01" id="bmi" name="bmi" placeholder="18.1-42.2" required>
+
+                <label for="bp">Average blood pressure</label>
+                <input type="number" id="bp" name="bp" placeholder="62-133" required>
+
+                <label for="s1">Total serum cholesterol (tc)</label>
+                <input type="number" id="s1" name="s1" placeholder="97-300" required>
+
+                <label for="s2">Low-density lipoproteins (ldl)</label>
+                <input type="number" step="0.01" id="s2" name="s2" placeholder="41.6-242.4" required>
+
+                <label for="s3">High-density lipoproteins (hdl)</label>
+                <input type="number" id="s3" name="s3" placeholder="22-99" required>
+
+                <label for="s4">Total cholesterol / HDL (tch)</label>
+                <input type="number" id="s4" name="s4" placeholder="2-9.09" required>
+
+                <label for="s5">Possibly log of serum triglycerides level (ltg)</label>
+                <input type="number" step="0.0001" id="s5" name="s5" placeholder="3.2581-6.107" required>
+
+                <label for="s6">Blood sugar level (glu)</label>
+                <input type="number" step="0.01" id="s6" name="s6" placeholder="58-124" required>
+
+                <!-- Контейнер для кнопок -->
+                <div class="button-container">
+                    <button type="submit">Predict</button>
+                    <button type="button" id="testButton">Test</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Блок с результатами -->
+        <div class="results-container">
+            <h2>Results</h2>
+            <div id="result">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Prediction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Сюда будут вставлены строки с результатами -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

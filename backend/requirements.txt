@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-jose[cryptography]
+passlib
+python-multipart
+httpx
+typing
+sqlalchemy
+typing
+pydantic
